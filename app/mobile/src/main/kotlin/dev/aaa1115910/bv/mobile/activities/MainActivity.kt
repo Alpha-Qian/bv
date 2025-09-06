@@ -11,7 +11,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import dev.aaa1115910.bv.mobile.screen.MobileMainScreen
-import dev.aaa1115910.bv.mobile.screen.RegionBlockScreen
 import dev.aaa1115910.bv.mobile.theme.BVMobileTheme
 import dev.aaa1115910.bv.util.NetworkUtil
 import kotlinx.coroutines.Dispatchers
@@ -41,8 +40,6 @@ class MainActivity : ComponentActivity() {
             BVMobileTheme {
                 if (isCheckingNetwork) {
                     // 避免提前加载内容
-                } else if (isMainlandChina) {
-                    RegionBlockScreen()
                 } else {
                     MobileMainScreen()
                 }
